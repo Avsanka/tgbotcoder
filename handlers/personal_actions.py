@@ -7,7 +7,19 @@ async def send_welcome(message: types.Message):
 
     await message.reply("Привет!\n Я бот-кодер, помощник программиста\n но пока что я только повторюшка")
 
-    @dp.message_handler()
-    async def echo(message: types.Message):
+@dp.message_handler(text=["Ты писька", "ты писька"])
+async def send_message(message: types.Message):
 
-        await message.answer(message.text)
+        await message.reply("сам писька")
+
+@dp.message_handler(text=["Ты красавчик", "ты красавчик"])
+async def send_message(message: types.Message):
+
+        await message.reply("а ты тоже ничего))")
+
+@dp.message_handler()
+async def echo(message: types.Message):
+
+    await message.answer(message.text)
+
+
