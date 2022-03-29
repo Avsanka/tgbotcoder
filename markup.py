@@ -11,7 +11,7 @@ mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnMainEge, btnMainSam,
 btnEgePascal = KeyboardButton('Pascal')
 btnEgePython = KeyboardButton('Python')
 btnEgeCpp = KeyboardButton('C++')
-egeEgeLanMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnEgePascal, btnEgePython, btnEgeCpp, btnBack)
+egeLanMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnEgePascal, btnEgePython, btnEgeCpp, btnBack)
 
 btnSamCs = KeyboardButton('C#')
 btnSamCpp = KeyboardButton('C++')
