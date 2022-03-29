@@ -10,8 +10,12 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def bot_message(message: types.Message):
-    if message.text == 'left':
-        await  message.reply("Выбери действие", reply_markup=nav.otherMenu)
+    if message.text == 'Егэ':
+        await  message.reply("Выбери действие", reply_markup=nav.egeLanMenu)
+    elif message.text == 'Самостоятельное изучение':
+        await  message.reply("Выберите язык", reply_markup=nav.samMenu)
+    elif message.text == 'Помощь с выбором языка':
+        await  message.reply("Пока в разработке", reply_markup=nav.lanHelpMenu)
     elif message.text == 'Back to main':
         await message.reply("Вот главное меню", reply_markup=nav.mainMenu)
 

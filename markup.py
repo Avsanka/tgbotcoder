@@ -1,11 +1,19 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-btnOne = KeyboardButton('left')
-btnTwo = KeyboardButton('right')
-mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnOne, btnTwo)
+btnMainEge = KeyboardButton('Егэ')
+btnMainSam = KeyboardButton('Самостоятельное изучение')
+btnMainLanHelp = KeyboardButton('Помощь с выбором языка')
+mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnMainEge, btnMainSam, btnMainLanHelp)
 
 
-btnSuper = KeyboardButton('changed')
-btnClassic = KeyboardButton('heeeeyoooh')
+btnPascal = KeyboardButton('Pascal')
+btnPython = KeyboardButton('Python')
+btnCpp = KeyboardButton('C++')
 btnBack = KeyboardButton('Back to main')
-otherMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnClassic, btnSuper, btnBack)
+egeLanMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnPascal, btnPython, btnCpp, btnBack)
+
+btnCs = KeyboardButton('C#')
+samMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnCs, btnBack)
+
+lanHelpMenu = ReplyKeyboardMarkup(btnBack)
+
