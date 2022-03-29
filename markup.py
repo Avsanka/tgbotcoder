@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-btnMainEge = KeyboardButton('Егэ')
+btnMainEge = KeyboardButton('ЕГЭ')
 btnMainSam = KeyboardButton('Самостоятельное изучение')
 btnMainLanHelp = KeyboardButton('Помощь с выбором языка')
 mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnMainEge, btnMainSam, btnMainLanHelp)
