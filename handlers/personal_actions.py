@@ -10,7 +10,7 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler()
 async def bot_message(message: types.Message):
-    if message.text == 'Егэ':
+    if message.text == 'ЕГЭ':
         await  message.reply("Выбери действие", reply_markup=nav.egeLanMenu)
     elif message.text == 'Самостоятельное изучение':
         await  message.reply("Выберите язык", reply_markup=nav.samMenu)
