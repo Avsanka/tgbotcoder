@@ -15,5 +15,5 @@ egeLanMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnPascal, btnPython,
 btnCs = KeyboardButton('C#')
 samMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnCs, btnBack)
 
-lanHelpMenu = ReplyKeyboardMarkup(btnBack)
+lanHelpMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnBack)
 
