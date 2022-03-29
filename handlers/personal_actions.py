@@ -8,19 +8,14 @@ async def send_welcome(message: types.Message):
 
     await message.reply("Привет!\n Я бот-кодер, помощник программиста\n но пока что я только повторюшка", reply_markup=nav.mainMenu)
 
-@dp.message_handler(text=["Ты писька", "ты писька"])
-async def send_message(message: types.Message):
-
-        await message.reply("сам писька")
-
-@dp.message_handler(text=["Ты красавчик", "ты красавчик"])
-async def send_message(message: types.Message):
-
-        await message.reply("а ты тоже ничего))")
-
 @dp.message_handler()
-async def echo(message: types.Message):
+async def bot_message(message: types.Message):
+    if message.text == 'left':
+        await  message.reply("Выбери действие", reply_markup=nav.otherMenu)
+    elif message.text == 'Back to main':
+        await message.reply("Вот главное меню", reply_markup=nav.mainMenu)
 
-    await message.answer(message.text)
+
+
 
 
