@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-btnBack = KeyboardButton('⏮Back to main')
+btnBack = KeyboardButton('⏮В главное меню')
 
 btnMainEge = KeyboardButton('📚ЕГЭ')
 btnMainSam = KeyboardButton('🤓 Самостоятельное изучение')
@@ -13,8 +13,8 @@ btnEgePython = KeyboardButton('🐍Python')
 btnEgeCpp = KeyboardButton('➕C++')
 egeLanMenu = ReplyKeyboardMarkup(resize_keyboard=True, row_width=3).add(btnEgePascal, btnEgePython, btnEgeCpp, btnBack)
 
-btnSamCs = KeyboardButton('C#')
-btnSamCpp = KeyboardButton('C++')
+btnSamCs = KeyboardButton('#️⃣C#')
+btnSamCpp = KeyboardButton('➕C++')
 samMenu = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1).add(btnSamCs, btnSamCpp, btnBack)
 
 lanHelpMenu = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1).add(btnBack)
