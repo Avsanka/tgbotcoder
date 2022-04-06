@@ -18,7 +18,7 @@ async def bot_message(message: types.Message):
 
     elif message.text == 'Помощь с выбором языка':
         await  message.reply("Пока в разработке", reply_markup=nav.lanHelpMenu)
-        
+
     elif message.text == 'C++':
         await  message.reply("пока в разработке", reply_markup=nav.samMenu)
 
