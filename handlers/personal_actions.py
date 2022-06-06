@@ -6,13 +6,14 @@ from dispatcher import dp
 import config
 import markup as nav
 import dicts as dic
+import test as t
+
+t.dp
 
 async def photo_answer(message: Message, photo_file_id):
     s = dic.dictSam[message.text]
     await message.reply(s)
     await dp.bot.send_photo(chat_id=message.from_user.id, photo=photo_file_id)
-
-#def test():
 
 
 @dp.message_handler(commands=['start', 'help'])
@@ -211,10 +212,6 @@ async def answer(message: Message):
     await dp.bot.send_photo(chat_id=message.from_user.id, photo=photo_file_id)
 #------------#
 
-@dp.message_handler(text='✅Помощь с выбором языка')
-async def answer(message: Message):
-    await message.reply("Пока в разработке", reply_markup=nav.mainMenu)
-
 
 @dp.message_handler()
 async def bot_message(message: types.Message):
@@ -244,8 +241,6 @@ async def bot_message(message: types.Message):
 
     elif message.text == "Массивы C#":
         await message.reply("Массив – это объединенная в единое целое группа переменных одного типа к которым можно обращаться по единому имени. Доступ к элементам одномерного массива осуществляется с помощью индекса, который определяет их положение. Индексация массивов начинается с нуля. Чтобы получить доступ к элементу массива с помощью индекса, нужно взять индекс элемента в квадратные скобки.", reply_markup=nav.MasCsMenu)
-
-
 
 
     elif message.text == "Условия 🐍":

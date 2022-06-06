@@ -8,7 +8,6 @@ btnMainSam = KeyboardButton('🤓 Самостоятельное изучени�
 btnMainLanHelp = KeyboardButton('✅Помощь с выбором языка')
 mainMenu = ReplyKeyboardMarkup(resize_keyboard=True, row_width=1).add(btnMainEge, btnMainSam, btnMainLanHelp)
 
-
 btnMainTerms = KeyboardButton('📚Базовые термины')
 btnHardTerms = KeyboardButton('📚Продвинутые термины')
 btnTypes = KeyboardButton('📚Типы данных')
